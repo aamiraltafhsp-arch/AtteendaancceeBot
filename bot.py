@@ -364,7 +364,7 @@ async def back(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # APP
 # ========================
 
-app = ApplicationBuilder().token(TOKEN).build()
+app = ApplicationBuilder().token(TOKEN).concurrent_updates(True).build()
 
 app.add_handler(CommandHandler("startwork", startwork))
 app.add_handler(CommandHandler("endwork", endwork))
